@@ -15,7 +15,6 @@
 <script>
 import { TimelineMax } from 'gsap'
 import ScrollMagic from 'scrollmagic'
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
 export default {
   name: 'about',
   mounted () {
@@ -34,6 +33,7 @@ export default {
     })
       .setTween(t1)
       .setPin('.wrap')
+      .addIndicators()
       .addTo(controller)
     const t2 = new TimelineMax()
       .to('.forthcontent', 2, {
@@ -52,6 +52,7 @@ export default {
     })
       .setTween(t2)
       .setPin('.wrap2')
+      .addIndicators()
       .addTo(controller)
   }
 }

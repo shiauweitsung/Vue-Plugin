@@ -21,7 +21,12 @@ const routes = [{
     path: '/circle',
     name: 'circle',
     component: () => import( /* webpackChunkName: "about" */ '../views/circleProgress.vue')
-  }
+  },
+  {
+    path: '/carousel',
+    name: 'carousel',
+    component: () => import('../views/Carousel.vue')
+  },
 
 ]
 

@@ -14,7 +14,7 @@ import {
 import VueCarousel from 'vue-carousel';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
-
+require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators')
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 Vue.use(VueCarousel);
 Vue.use(VueAwesomeSwiper)

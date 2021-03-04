@@ -2,17 +2,33 @@
   <div>
     <!-- swiper star -->
     <h1>swiper</h1>
-    <swiper class="swiper" ref="mySwiper" :options="swiperOptions">
-      <swiper-slide class="test">
-        <img src="https://picsum.photos/200/300" alt="" />
+    <swiper
+      :class="swiperOption.swiperWrap"
+      ref="mySwiper"
+      :options="swiperOption.swiperOptions"
+    >
+      <swiper-slide
+        :class="swiperOption.swiperClass"
+        v-for="data in swiperOption.swiperData"
+        :key="data.id"
+      >
+        <img :src="data.img" alt="" />
       </swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide>
-      <swiper-slide>Slide 5</swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
-      <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
+      <div
+        class="swiper-pagination"
+        slot="pagination"
+        v-if="swiperOption.pagination"
+      ></div>
+      <div
+        class="swiper-button-prev"
+        slot="button-prev"
+        v-if="swiperOption.navigation.prev"
+      ></div>
+      <div
+        class="swiper-button-next"
+        slot="button-next"
+        v-if="swiperOption.navigation.next"
+      ></div>
     </swiper>
     <!-- swiper end -->
     <p>參考資料</p>
@@ -24,7 +40,6 @@
     <br />
     <hr />
     <br />
-    <div>{{ swiperOption }}</div>
   </div>
 </template>
 <script>
@@ -39,39 +54,6 @@ export default {
     swiper: directive
   },
   props: ['swiperOption'],
-  data () {
-    return {
-      swiperOptions: {
-        spaceBetween: 30,
-        centeredSlides: true,
-        mousewheel: true,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        breakpoints: {
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        }
-      }
-    }
-  },
-  methods: {
-    updateOption: function (option) {
-      this.$emit('option', option)
-    }
-  }
 };
 </script>
 <style lang="scss" scoped>
@@ -100,7 +82,7 @@ export default {
   align-items: center;
   height: 200px;
   & > img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 </style>
