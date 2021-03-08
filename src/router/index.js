@@ -27,7 +27,24 @@ const routes = [{
     name: 'carousel',
     component: () => import('../views/Carousel.vue')
   },
-
+  {
+    path: "/image",
+    name: "Iamge",
+    component: () =>
+      import("../views/ImageLoad.vue")
+  },
+  {
+    path: "/validate",
+    name: "Validate",
+    component: () =>
+      import("../views/Validate.vue")
+  },
+  {
+    path: "/calendar",
+    name: "calendar",
+    component: () =>
+      import("../views/Calendar.vue")
+  },
 ]
 
 const router = new VueRouter({

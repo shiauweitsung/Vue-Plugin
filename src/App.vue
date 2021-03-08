@@ -4,7 +4,10 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/circle">Circle</router-link> |
-      <router-link to="/carousel">carousel</router-link>
+      <router-link to="/carousel">carousel</router-link> |
+      <router-link to="/image">image</router-link> |
+      <router-link to="/validate">validate</router-link> |
+      <router-link to="/calendar">calendar</router-link>
     </div>
     <router-view />
   </div>
