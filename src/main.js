@@ -11,7 +11,7 @@ import {
 import {
   ScrollMagicPluginGsap
 } from "scrollmagic-plugin-gsap"
-import VueCarousel from 'vue-carousel';
+import VueCarousel from 'vue-carousel'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 // imageload1
@@ -19,7 +19,7 @@ import VueLazyload from 'vue-lazyload'
 // imageload2
 import {
   VLazyImagePlugin
-} from "v-lazy-image";
+} from "v-lazy-image"
 // imageload3
 import VueClazyLoad from 'vue-clazy-load'
 // vee validate
@@ -30,16 +30,21 @@ import {
   extend,
   configure
 } from 'vee-validate'
-import * as rules from 'vee-validate/dist/rules';
+import * as rules from 'vee-validate/dist/rules'
 import {
   TW,
   messages
 } from 'vee-validate/dist/locale/zh_TW.json'
 // calendar
-import VCalendar from 'v-calendar';
+import VCalendar from 'v-calendar'
 // calendar2
-import DatePicker from 'vue2-datepicker';
-import 'vue2-datepicker/index.css';
+import DatePicker from 'vue2-datepicker'
+import 'vue2-datepicker/index.css'
+// axios
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import Vuex from 'vuex'
+import store from './store'
 Object.keys(rules).forEach(rule => {
   extend(rule, {
     ...rules[rule],
@@ -83,10 +88,13 @@ localize('zh_TW', TW)
 Vue.use(VCalendar)
 // calendar2
 Vue.component('DatePicker', DatePicker)
+Vue.use(VueAxios, axios)
+Vue.use(Vuex)
 Vue.config.productionTip = false
 
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

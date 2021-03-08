@@ -45,6 +45,16 @@ const routes = [{
     component: () =>
       import("../views/Calendar.vue")
   },
+  {
+    path: "/vuex",
+    name: "vuex",
+    component: () =>
+      import("../views/VuexPractice.vue"),
+    children: [{
+      path: '',
+      component: () => import("../components/products")
+    }]
+  },
 ]
 
 const router = new VueRouter({
