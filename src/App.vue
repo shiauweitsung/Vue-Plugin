@@ -8,7 +8,8 @@
       <router-link to="/image">image</router-link> |
       <router-link to="/validate">validate</router-link> |
       <router-link to="/calendar">calendar</router-link> |
-      <router-link to="/vuex">vuex</router-link>
+      <router-link to="/vuex">vuex</router-link> |
+      <router-link to="/pageloading">pageloading</router-link> |
     </div>
     <router-view />
   </div>

@@ -51,10 +51,30 @@ const routes = [{
     component: () =>
       import("../views/VuexPractice.vue"),
     children: [{
-      path: '',
+      path: "",
       component: () => import("../components/products")
     }]
   },
+  {
+    path: "/pageloading",
+    name: "pageloading",
+    component: () => import("../views/PageLoading.vue"),
+    children: [{
+        path: "pageloading1",
+        component: () => import("../components/pageloading1.vue"),
+      },
+      {
+        path: "pageloading2",
+        name: "pageloading2",
+        component: () => import("../components/pageloading2.vue"),
+      },
+      {
+        path: "pageloading3",
+        name: "pageloading3",
+        component: () => import("../components/pageloading3.vue"),
+      }
+    ]
+  }
 ]
 
 const router = new VueRouter({

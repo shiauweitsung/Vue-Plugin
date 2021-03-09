@@ -22,19 +22,8 @@ import {
 } from "v-lazy-image"
 // imageload3
 import VueClazyLoad from 'vue-clazy-load'
-// vee validate
-import {
-  ValidationProvider,
-  ValidationObserver,
-  localize,
-  extend,
-  configure
-} from 'vee-validate'
-import * as rules from 'vee-validate/dist/rules'
-import {
-  TW,
-  messages
-} from 'vee-validate/dist/locale/zh_TW.json'
+// vee-validate
+import validate from './vee-validate/index'
 // calendar
 import VCalendar from 'v-calendar'
 // calendar2
@@ -43,24 +32,21 @@ import 'vue2-datepicker/index.css'
 // axios
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+// vuex
 import Vuex from 'vuex'
 import store from './store'
-Object.keys(rules).forEach(rule => {
-  extend(rule, {
-    ...rules[rule],
-    message: messages[rule]
-  })
-})
-configure({
-  classes: {
-    valid: 'is-valid',
-    invalid: 'is-invalid'
-  }
-})
+// pageloading1
+import Dialog from 'vue-dialog-loading'
+// pageloading2
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
+
 require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators')
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
+
 Vue.use(VueCarousel);
 Vue.use(VueAwesomeSwiper)
+
 // imageload1
 Vue.use(VueLazyload, {
   preLoad: 1.3,
@@ -80,21 +66,26 @@ Vue.use(VueLazyload, {
 Vue.use(VLazyImagePlugin)
 // imageload3
 Vue.use(VueClazyLoad)
-// vee validate
-Vue.component('ValidationProvider', ValidationProvider)
-Vue.component('ValidationObserver', ValidationObserver)
-localize('zh_TW', TW)
 // calendar
 Vue.use(VCalendar)
 // calendar2
 Vue.component('DatePicker', DatePicker)
+
+// vuex
 Vue.use(VueAxios, axios)
 Vue.use(Vuex)
+
+// pageloading1
+Vue.use(Dialog)
+// pageloading2
+Vue.component('Loading', Loading)
+
 Vue.config.productionTip = false
 
 
 new Vue({
   router,
   store,
+  validate,
   render: h => h(App)
 }).$mount('#app')
