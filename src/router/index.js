@@ -51,9 +51,15 @@ const routes = [{
     component: () =>
       import("../views/VuexPractice.vue"),
     children: [{
-      path: "",
-      component: () => import("../components/products")
-    }]
+        path: "",
+        component: () => import("../components/products")
+      },
+      {
+        path: "value",
+        name: "vuexValue",
+        component: () => import("../components/VuexValue")
+      }
+    ]
   },
   {
     path: "/pageloading",
@@ -78,6 +84,7 @@ const routes = [{
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

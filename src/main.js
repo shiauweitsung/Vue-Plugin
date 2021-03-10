@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import './bus'
+import alertMessage from './components/AlertMessage.vue'
 import '@/assets/sass/main.scss'
 import 'jquery'
 import * as ScrollMagic from "scrollmagic"
@@ -29,6 +31,7 @@ import VCalendar from 'v-calendar'
 // calendar2
 import DatePicker from 'vue2-datepicker'
 import 'vue2-datepicker/index.css'
+
 // axios
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -79,6 +82,7 @@ Vue.use(Vuex)
 Vue.use(Dialog)
 // pageloading2
 Vue.component('Loading', Loading)
+Vue.component('alert', alertMessage)
 
 Vue.config.productionTip = false
 

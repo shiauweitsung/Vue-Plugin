@@ -51,7 +51,7 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss" >
+<style scope lang="scss" >
 .VueCarousel {
   background-color: rgb(154, 255, 133) !important;
 }

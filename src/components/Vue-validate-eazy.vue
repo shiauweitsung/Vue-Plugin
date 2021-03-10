@@ -65,6 +65,7 @@
         </button>
       </div>
     </form>
+    <a href="https://github.com/lfyfly/vue-validate-easy">參考網址</a>
   </div>
 </template>
 <script>
@@ -88,7 +89,7 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" scope>
 label {
   margin-right: 10px;
 }
