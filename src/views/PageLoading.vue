@@ -2,8 +2,7 @@
   <div>
     <h1>page loading</h1>
     <router-link to="/pageloading/pageloading1">pageloading1</router-link> |
-    <router-link to="/pageloading/pageloading2">pageloading2</router-link> |
-    <router-link to="/pageloading/pageloading3">pageloading3</router-link>
+    <router-link to="/pageloading/pageloading2">pageloading2</router-link>
     <router-view></router-view>
   </div>
 </template>

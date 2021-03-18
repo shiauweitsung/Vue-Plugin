@@ -10,11 +10,11 @@
       <router-link to="/calendar">calendar</router-link> |
       <router-link to="/vuex">vuex</router-link> |
       <router-link to="/pageloading">pageloading</router-link> |
+      <router-link to="/CartAnimation">addCart</router-link> |
     </div>
     <router-view />
   </div>
 </template>
-
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

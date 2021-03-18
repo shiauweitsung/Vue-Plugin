@@ -21,7 +21,7 @@ export default new Vuex.Store({
         timestemp
       }
       context.commit('ALERTMESSAGE', messages)
-      // context.dispatch('removeMessage', timestemp)
+      context.dispatch('removeMessage', timestemp)
     },
     removeMessage: function (context, timestemp) {
       setTimeout(function () {

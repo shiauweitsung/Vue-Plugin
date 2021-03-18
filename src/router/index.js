@@ -73,13 +73,13 @@ const routes = [{
         path: "pageloading2",
         name: "pageloading2",
         component: () => import("../components/pageloading2.vue"),
-      },
-      {
-        path: "pageloading3",
-        name: "pageloading3",
-        component: () => import("../components/pageloading3.vue"),
       }
     ]
+  },
+  {
+    path: "/CartAnimation",
+    name: "CartAnimation",
+    component: () => import("../views/CartAnimation.vue")
   }
 ]
 

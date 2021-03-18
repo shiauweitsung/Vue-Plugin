@@ -55,7 +55,7 @@ export default {
     vm.isLoading = true
     setTimeout(function () {
       vm.isLoading = false
-    }, 3000)
+    }, 5000)
   }
 }
 </script>
