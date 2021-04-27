@@ -91,6 +91,11 @@ const routes = [{
   name: 'elementui',
   component: () => import('../views/Elementui.vue')
 },
+{
+  path: '/pagination',
+  name: 'pagination',
+  component: () => import('../views/Pagination.vue')
+},
 ]
 
 const router = new VueRouter({

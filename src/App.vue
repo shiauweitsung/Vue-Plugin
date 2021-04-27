@@ -13,6 +13,7 @@
       <router-link to="/CartAnimation">addCart</router-link> |
       <router-link to="/Address">Address</router-link> |
       <router-link to="/elementui">Elementui</router-link> |
+      <router-link to="/pagination">pagination</router-link> |
     </div>
     <router-view />
   </div>
