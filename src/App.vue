@@ -11,6 +11,8 @@
       <router-link to="/vuex">vuex</router-link> |
       <router-link to="/pageloading">pageloading</router-link> |
       <router-link to="/CartAnimation">addCart</router-link> |
+      <router-link to="/Address">Address</router-link> |
+      <router-link to="/elementui">Elementui</router-link> |
     </div>
     <router-view />
   </div>

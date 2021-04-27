@@ -25,7 +25,7 @@ import {
 // imageload3
 import VueClazyLoad from 'vue-clazy-load'
 // vee-validate
-import validate from './vee-validate/index'
+import validate from './vee-validate/index.js'
 // calendar
 import VCalendar from 'v-calendar'
 // calendar2
@@ -41,11 +41,14 @@ import store from './store'
 // pageloading1
 import Dialog from 'vue-dialog-loading'
 // pageloading2
-import Loading from 'vue-loading-overlay';
-import 'vue-loading-overlay/dist/vue-loading.css';
+import Loading from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/vue-loading.css'
+// elementUI
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
 require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators')
-ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
+ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax)
 
 Vue.use(VueCarousel);
 Vue.use(VueAwesomeSwiper)
@@ -83,6 +86,9 @@ Vue.use(Dialog)
 // pageloading2
 Vue.component('Loading', Loading)
 Vue.component('alert', alertMessage)
+
+// elementUI
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
