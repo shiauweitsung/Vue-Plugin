@@ -14,6 +14,7 @@
       <router-link to="/Address">Address</router-link> |
       <router-link to="/elementui">Elementui</router-link> |
       <router-link to="/pagination">pagination</router-link> |
+      <router-link to="/api">API</router-link> |
     </div>
     <router-view />
   </div>

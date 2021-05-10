@@ -96,6 +96,11 @@ const routes = [{
   name: 'pagination',
   component: () => import('../views/Pagination.vue')
 },
+{
+  path: '/api',
+  name: 'api',
+  component: () => import('../views/Api.vue')
+}
 ]
 
 const router = new VueRouter({

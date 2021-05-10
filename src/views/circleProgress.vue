@@ -37,7 +37,7 @@
 import { TweenMax } from 'gsap'
 export default {
   name: 'circles',
-  mounted () {
+  mounted() {
     // const circle = $('.circleBar')
     // $('input').on('change', function () {
     //   let length = $('input').length
@@ -62,6 +62,7 @@ export default {
     $('input').on('change', function () {
       let length = $('input').length
       let lengthPercent = (100 / length).toFixed(2)
+      // 取得input內有值的數量
       let hasPercent = $('input').filter(function () {
         return $(this).val() !== ''
       }).length
