@@ -100,6 +100,11 @@ const routes = [{
   path: '/api',
   name: 'api',
   component: () => import('../views/Api.vue')
+},
+{
+  path: '/cookie',
+  name: 'cookie',
+  component: () => import('../views/Cookie.vue')
 }
 ]
 

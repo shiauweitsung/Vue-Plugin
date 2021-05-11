@@ -15,6 +15,7 @@
       <router-link to="/elementui">Elementui</router-link> |
       <router-link to="/pagination">pagination</router-link> |
       <router-link to="/api">API</router-link> |
+      <router-link to="/Cookie">Cookie</router-link> |
     </div>
     <router-view />
   </div>
