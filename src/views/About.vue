@@ -18,12 +18,12 @@ import { TimelineMax } from 'gsap'
 import ScrollMagic from 'scrollmagic'
 export default {
   name: 'about',
-  data () {
+  data() {
     return {
       next: '123'
     }
   },
-  mounted () {
+  mounted() {
     const t1 = new TimelineMax()
       .from('.firstcontent', 2, { x: '-100%' })
       .to('.firstcontent', 2, { x: '0%' })

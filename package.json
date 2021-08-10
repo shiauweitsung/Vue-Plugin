@@ -17,6 +17,7 @@
     "scrollmagic-plugin-gsap": "^1.0.4",
     "slick-carousel": "^1.8.1",
     "swiper": "^5.4.5",
+    "three": "^0.131.3",
     "v-calendar": "^2.2.4",
     "v-lazy-image": "^1.4.0",
     "vee-validate": "^3.4.5",

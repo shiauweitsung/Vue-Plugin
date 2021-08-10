@@ -105,6 +105,11 @@ const routes = [{
   path: '/cookie',
   name: 'cookie',
   component: () => import('../views/Cookie.vue')
+},
+{
+  path: '/three',
+  name: 'three',
+  component: () => import('../views/three.vue')
 }
 ]
 

@@ -46,6 +46,8 @@ import 'vue-loading-overlay/dist/vue-loading.css'
 // elementUI
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+// three
+import * as THREE from 'three'
 
 require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators')
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax)
@@ -88,10 +90,16 @@ Vue.component('Loading', Loading)
 Vue.component('alert', alertMessage)
 
 // elementUI
-Vue.use(ElementUI);
-
+Vue.use(ElementUI)
+// three
+Vue.use(THREE)
 Vue.config.productionTip = false
 
+Vue.mixin({
+  created() {
+    this.THREE = THREE
+  }
+})
 
 new Vue({
   router,
