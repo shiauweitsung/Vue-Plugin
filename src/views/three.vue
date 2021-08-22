@@ -10,7 +10,7 @@ import threePage from '../components/three-1.vue'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 // import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
-import * as dat from 'dat.gui'
+// import * as dat from 'dat.gui'
 export default {
   components: {
     threePage
@@ -99,15 +99,15 @@ export default {
       }
     );
     // GUI setting
-    const gui = new dat.GUI();
-    console.log(gui)
-    // gui.add(cube.position, 'y').min(-30).max(30).step(0.01)
-    // gui.add(cube.position, 'x').min(-30).max(30).step(0.01)
-    // gui.add(cube.position, 'z').min(-30).max(30).step(0.01)
-    gui.add(pointLight.position, 'y').min(0).max(100).step(0.01)
-    gui.add(pointLight.position, 'x').min(0).max(100).step(0.01)
-    gui.add(pointLight.position, 'z').min(0).max(100).step(0.01)
-    gui.add(pointLight, 'intensity').min(-1).max(5).step(0.01)
+    // const gui = new dat.GUI();
+    // console.log(gui)
+    // gui.add(camera.position, 'y').min(-30).max(90).step(0.01)
+    // gui.add(camera.position, 'x').min(-30).max(90).step(0.01)
+    // gui.add(camera.position, 'z').min(-30).max(90).step(0.01)
+    // gui.add(pointLight.position, 'y').min(0).max(100).step(0.01)
+    // gui.add(pointLight.position, 'x').min(0).max(100).step(0.01)
+    // gui.add(pointLight.position, 'z').min(0).max(100).step(0.01)
+    // gui.add(pointLight, 'intensity').min(-1).max(5).step(0.01)
     // cube animation
     const animate = function () {
       requestAnimationFrame(animate)
