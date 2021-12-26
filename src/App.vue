@@ -17,6 +17,7 @@
       <router-link to="/api">API</router-link> |
       <router-link to="/Cookie">Cookie</router-link> |
       <router-link to="/three">three</router-link> |
+      <router-link to="/lol">lol</router-link> |
     </div>
     <router-view />
   </div>

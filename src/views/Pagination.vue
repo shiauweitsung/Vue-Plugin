@@ -34,6 +34,8 @@
       <p v-if="loading">加載中...</p>
       <p v-if="noMore">沒有更多了</p>
     </div>
+    <h2>純JS分頁邏輯</h2>
+    <div class="content"></div>
     <div>
       {{ dataLength }}
     </div>
@@ -49,7 +51,9 @@ export default {
       currentPage: 1,
       scrollPage: 9,
       scrollCount: 1,
-      loading: false
+      loading: false,
+      maxData: this.currentPage * this.perPage,
+      minData: (this.currentPage * this.perPage) - this.perPage + 1
     }
   },
   methods: {
@@ -70,6 +74,9 @@ export default {
         this.scrollCount += 1
         this.loading = false
       }, 2000)
+    },
+    getContent() {
+
     }
   },
   computed: {
@@ -88,6 +95,9 @@ export default {
     },
     disabled() {
       return this.loading || this.noMore
+    },
+    jsData() {
+      return this.data.slice(this.minData, this.maxData)
     }
   },
   created() {
